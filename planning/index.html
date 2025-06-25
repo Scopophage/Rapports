@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning des Missions d'Alternance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="header__title">Planning des Missions d'Alternance</h1>
+            <p class="header__period">Septembre 2024 - Août 2025</p>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="tabs-nav">
+            <button class="tab-btn active" data-tab="gantt">Vue Gantt</button>
+            <button class="tab-btn" data-tab="timeline">Timeline</button>
+            <button class="tab-btn" data-tab="charges">Charges Mensuelles</button>
+            <button class="tab-btn" data-tab="stats">Statistiques</button>
+        </nav>
+
+        <!-- Tab Content -->
+        <main class="tab-content">
+            <!-- Vue Gantt -->
+            <section id="gantt" class="tab-panel active">
+                <div class="card">
+                    <div class="card__body">
+                        <div class="gantt-controls">
+                            <div class="legend">
+                                <h4>Légende - Cliquer pour filtrer :</h4>
+                                <div class="legend-items">
+                                    <button class="legend-item active" data-mission="GLPI">
+                                        <span class="legend-color" style="background-color: #2196F3;"></span>
+                                        Mission GLPI
+                                    </button>
+                                    <button class="legend-item active" data-mission="KPI">
+                                        <span class="legend-color" style="background-color: #4CAF50;"></span>
+                                        Mission KPI
+                                    </button>
+                                    <button class="legend-item active" data-mission="Grafana">
+                                        <span class="legend-color" style="background-color: #FF9800;"></span>
+                                        Mission Grafana
+                                    </button>
+                                    <button class="legend-item active" data-mission="Support">
+                                        <span class="legend-color" style="background-color: #9E9E9E;"></span>
+                                        Support
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gantt-container">
+                            <svg id="gantt-chart" class="gantt-chart"></svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Vue Timeline -->
+            <section id="timeline" class="tab-panel">
+                <div class="card">
+                    <div class="card__body">
+                        <h3>Timeline des Phases Principales</h3>
+                        <div class="timeline-container">
+                            <svg id="timeline-chart" class="timeline-chart"></svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Vue Charges Mensuelles -->
+            <section id="charges" class="tab-panel">
+                <div class="card">
+                    <div class="card__body">
+                        <h3>Répartition Mensuelle des Charges</h3>
+                        <div class="charges-container">
+                            <svg id="charges-chart" class="charges-chart"></svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Vue Statistiques -->
+            <section id="stats" class="tab-panel">
+                <div class="stats-grid">
+                    <div class="card stats-card">
+                        <div class="card__body">
+                            <h4>Durée Totale</h4>
+                            <div class="stat-value">365 jours</div>
+                            <div class="stat-label">1 année complète</div>
+                        </div>
+                    </div>
+                    <div class="card stats-card">
+                        <div class="card__body">
+                            <h4>Missions Actives</h4>
+                            <div class="stat-value">4</div>
+                            <div class="stat-label">missions principales</div>
+                        </div>
+                    </div>
+                    <div class="card stats-card">
+                        <div class="card__body">
+                            <h4>Phases Planifiées</h4>
+                            <div class="stat-value">12</div>
+                            <div class="stat-label">phases de développement</div>
+                        </div>
+                    </div>
+                    <div class="card stats-card">
+                        <div class="card__body">
+                            <h4>Pic d'Activité</h4>
+                            <div class="stat-value">Février 2025</div>
+                            <div class="stat-label">85 jours de charge</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card__body">
+                        <h3>Répartition des Missions</h3>
+                        <div class="pie-container">
+                            <svg id="pie-chart" class="pie-chart"></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__body">
+                        <h3>Phases Critiques</h3>
+                        <div class="critical-phases">
+                            <div class="phase-item">
+                                <div class="phase-header">
+                                    <span class="phase-color" style="background-color: #2196F3;"></span>
+                                    <span class="phase-name">GLPI - Relances et corrections</span>
+                                </div>
+                                <div class="phase-duration">181 jours (Jan - Juin 2025)</div>
+                                <div class="phase-description">Phase la plus longue du projet</div>
+                            </div>
+                            <div class="phase-item">
+                                <div class="phase-header">
+                                    <span class="phase-color" style="background-color: #4CAF50;"></span>
+                                    <span class="phase-name">KPI - Développement Python</span>
+                                </div>
+                                <div class="phase-duration">168 jours (Sept 2024 - Fév 2025)</div>
+                                <div class="phase-description">Développement principal terminé</div>
+                            </div>
+                            <div class="phase-item">
+                                <div class="phase-header">
+                                    <span class="phase-color" style="background-color: #FF9800;"></span>
+                                    <span class="phase-name">Grafana - Conception scripts</span>
+                                </div>
+                                <div class="phase-duration">149 jours (Fév - Juin 2025)</div>
+                                <div class="phase-description">Phase de développement en cours</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Tooltip -->
+        <div id="tooltip" class="tooltip"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
