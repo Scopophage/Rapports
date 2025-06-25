@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Professionnel - Alternance BlueKanGo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #21808D, #2c5aa0);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .header .period {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-size: 1rem;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .intro-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .intro-section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .intro-section p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #21808D, #2c5aa0);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border-color: #21808D;
+        }
+
+        .project-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #21808D, #2c5aa0);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .project-description {
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .project-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .project-features li {
+            padding: 8px 0;
+            color: #34495e;
+            display: flex;
+            align-items: center;
+        }
+
+        .project-features li::before {
+            content: '✓';
+            color: #21808D;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .project-link {
+            display: block;
+            background: linear-gradient(135deg, #21808D, #2c5aa0);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .project-link:hover {
+            background: linear-gradient(135deg, #1e6b77, #234a8a);
+            transform: scale(1.05);
+        }
+
+        .stats-section {
+            background: #f8f9fa;
+            margin: 50px -40px -50px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #21808D;
+            display: block;
+        }
+
+        .stat-label {
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .project-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎓 Portfolio Professionnel</h1>
+            <div class="subtitle">Alternance en Administration d'Infrastructures Sécurisées</div>
+            <div class="period">Septembre 2024 - Août 2025 • BlueKanGo</div>
+        </div>
+
+        <div class="content">
+            <div class="intro-section">
+                <h2>Mes Réalisations Professionnelles</h2>
+                <p>
+                    Découvrez mes projets et réalisations effectués dans le cadre de mon alternance chez BlueKanGo 
+                    pour l'obtention du titre professionnel d'Administrateur d'Infrastructures Sécurisées (AIS) niveau 6.
+                    Cette formation m'a permis de développer des compétences techniques avancées en cybersécurité, 
+                    supervision d'infrastructures et modernisation des systèmes d'information.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">📊</div>
+                    <h3 class="project-title">Rapport d'Alternance BlueKanGo</h3>
+                    <p class="project-description">
+                        Rapport technique complet détaillant mes missions d'alternance, de la supervision 
+                        avec Grafana à la modernisation de GLPI, en passant par le développement d'outils de monitoring.
+                    </p>
+                    <ul class="project-features">
+                        <li>Contexte professionnel et missions techniques</li>
+                        <li>Analyse des compétences développées</li>
+                        <li>Défis techniques et solutions apportées</li>
+                        <li>Bilan et perspectives d'évolution</li>
+                    </ul>
+                    <a href="./site1/" class="project-link">Consulter le Rapport</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">📈</div>
+                    <h3 class="project-title">Dashboard de Planification</h3>
+                    <p class="project-description">
+                        Application web interactive présentant la planification détaillée de mes missions 
+                        avec visualisations avancées, diagrammes de Gantt et analyse des charges de travail.
+                    </p>
+                    <ul class="project-features">
+                        <li>Planification interactive des missions</li>
+                        <li>Diagrammes de Gantt dynamiques</li>
+                        <li>Analyse des charges mensuelles</li>
+                        <li>Statistiques et métriques de projet</li>
+                    </ul>
+                    <a href="./site2/" class="project-link">Explorer le Dashboard</a>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <h3 style="color: #2c3e50; margin-bottom: 10px;">Alternance en Chiffres</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">365</span>
+                        <div class="stat-label">Jours d'alternance</div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4</span>
+                        <div class="stat-label">Missions principales</div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <div class="stat-label">Phases de développement</div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10</span>
+                        <div class="stat-label">Compétences AIS validées</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animation d'entrée
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.8s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+
+        // Effet hover avec son
+        document.querySelectorAll('.project-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
