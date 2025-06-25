@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport d'Alternance - Erwann Bonenfant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Navigation</h2>
+            <button class="sidebar-close" id="sidebarClose" aria-label="Fermer le menu">×</button>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#contexte" class="nav-link">Contexte d'Alternance</a></li>
+            <li><a href="#mission1" class="nav-link">Mission 1: Supervision KPI</a></li>
+            <li><a href="#git" class="nav-link">Gestion Git</a></li>
+            <li><a href="#mission2" class="nav-link">Mission 2: Refonte GLPI</a></li>
+            <li><a href="#competences" class="nav-link">Compétences</a></li>
+            <li><a href="#defis" class="nav-link">Défis Techniques</a></li>
+            <li><a href="#bilan" class="nav-link">Bilan et Perspectives</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>Rapport d'Alternance</h1>
+                <div class="header-info">
+                    <p><strong>Erwann Bonenfant</strong></p>
+                    <p>Bachelor Cybersécurité et Administration Réseau</p>
+                    <p>BlueKanGo • Septembre 2024 - Août 2025</p>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </header>
+
+        <!-- Introduction -->
+        <section id="introduction" class="section">
+            <div class="container">
+                <h2>Introduction</h2>
+                <div class="section-content">
+                    <p>Formation Bachelor Cybersécurité et Administration Réseau en alternance chez BlueKanGo pour une période d'un an s'étendant de septembre 2024 à août 2025.</p>
+                    
+                    <h3>Objectifs de l'alternance</h3>
+                    <ul>
+                        <li>Administration sécurisée des infrastructures existantes</li>
+                        <li>Innovation technique et modernisation de l'écosystème informatique</li>
+                        <li>Cybersécurité avancée et conformité réglementaire ISO 27001</li>
+                        <li>Expertise opérationnelle en supervision et automatisation</li>
+                    </ul>
+
+                    <h3>Présentation personnelle</h3>
+                    <p>Titulaire d'un BTS SIO option SISR, expérience préalable dans les services informatiques scolaires. Passionné par les technologies d'infrastructure et cybersécurité.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contexte d'Alternance -->
+        <section id="contexte" class="section">
+            <div class="container">
+                <h2>Contexte d'Alternance</h2>
+                <div class="section-content">
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>À propos de BlueKanGo</h3>
+                            <p>Éditeur de logiciels français spécialisé dans la digitalisation des processus QHSE et RSE</p>
+                            <ul class="info-list">
+                                <li><strong>Expérience :</strong> Plus de 20 ans d'expérience</li>
+                                <li><strong>Localisation :</strong> Près de Rennes</li>
+                                <li><strong>Clients :</strong> Plus de 2000 clients dans le monde</li>
+                            </ul>
+                            <h4>Secteurs d'activité</h4>
+                            <ul>
+                                <li>Grands groupes industriels</li>
+                                <li>Établissements hospitaliers</li>
+                                <li>Organismes publics</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Valeurs de l'entreprise</h3>
+                            <ul>
+                                <li>Travail collaboratif au sein des équipes</li>
+                                <li>Plaisir au travail et satisfaction personnelle</li>
+                                <li>Franchise et progression</li>
+                                <li>Exigence et normes de qualité</li>
+                                <li>Responsabilité individuelle</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Enjeux techniques</h3>
+                            <ul>
+                                <li>Centralisation intelligente de la supervision</li>
+                                <li>Automatisation avancée des processus</li>
+                                <li>Modernisation technologique</li>
+                                <li>Conformité réglementaire ISO 27001</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission 1 -->
+        <section id="mission1" class="section">
+            <div class="container">
+                <h2>Mission 1: Création d'un Outil de Supervision et d'Analyse KPI</h2>
+                <div class="section-content">
+                    <p>Centralisation et visualisation des indicateurs de performance avec Grafana</p>
+                    
+                    <h3>Objectifs</h3>
+                    <ul>
+                        <li>Regrouper les KPI des différents systèmes sur une interface unique</li>
+                        <li>Automatiser la collecte des données</li>
+                        <li>Concevoir des tableaux de bord adaptés aux besoins</li>
+                    </ul>
+
+                    <h3>Outils intégrés</h3>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <h4>GLPI</h4>
+                            <p>Logiciel de gestion des services informatiques et de parc</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4>Redmine</h4>
+                            <p>Application de gestion de projet et de suivi de tickets</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4>Cyberwatch</h4>
+                            <p>Plateforme de gestion des vulnérabilités et conformité</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4>Microsoft Defender</h4>
+                            <p>Plateforme de sécurité pour postes de travail et serveurs</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4>Centreon</h4>
+                            <p>Logiciel de supervision informatique</p>
+                        </div>
+                        <div class="tool-card">
+                            <h4>Graylog</h4>
+                            <p>Système de centralisation et analyse des logs</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Infrastructure technique</h3>
+                            <ul class="info-list">
+                                <li><strong>Serveur :</strong> Debian 12 sur VMware</li>
+                                <li><strong>SGBD :</strong> MariaDB</li>
+                                <li><strong>Automatisation :</strong> Scripts Bash + Cron</li>
+                            </ul>
+                            <h4>Avantages</h4>
+                            <ul>
+                                <li>Maîtrise complète de l'environnement</li>
+                                <li>Optimisation des ressources</li>
+                                <li>Simplicité de gestion opérationnelle</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gestion Git -->
+        <section id="git" class="section">
+            <div class="container">
+                <h2>Gestion Collaborative et Traçabilité avec Git</h2>
+                <div class="section-content">
+                    <h3>Objectifs</h3>
+                    <ul>
+                        <li>Assurer la traçabilité et la conformité</li>
+                        <li>Faciliter la collaboration</li>
+                        <li>Garantir la continuité de service</li>
+                    </ul>
+
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Implémentation</h3>
+                            <ul class="info-list">
+                                <li><strong>Dépôt :</strong> GitHub dédié</li>
+                                <li><strong>Documentation :</strong> README structuré</li>
+                                <li><strong>Versionnement :</strong> Commits systématiques</li>
+                                <li><strong>Collaboration :</strong> Pull requests et révisions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Bénéfices</h3>
+                    <ul>
+                        <li>Facilitation du travail en équipe</li>
+                        <li>Réduction des risques</li>
+                        <li>Optimisation des ressources humaines</li>
+                        <li>Auditabilité complète</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission 2 -->
+        <section id="mission2" class="section">
+            <div class="container">
+                <h2>Mission 2: Refonte et Modernisation de la Solution GLPI</h2>
+                <div class="section-content">
+                    <p>Projet stratégique de refonte complète pour la conformité ISO 27001</p>
+
+                    <h3>Enjeux</h3>
+                    <ul>
+                        <li>Modernisation technologique</li>
+                        <li>Automatisation des processus</li>
+                        <li>Conformité réglementaire</li>
+                        <li>Efficacité opérationnelle</li>
+                    </ul>
+
+                    <h3>Plugins implémentés</h3>
+                    <div class="plugins-grid">
+                        <div class="card">
+                            <div class="card__body">
+                                <h4>FormCreator</h4>
+                                <p>Standardisation des processus de création de tickets</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__body">
+                                <h4>Additional Fields</h4>
+                                <p>Conformité ISO 27001 avec champs personnalisés</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Migration des agents</h3>
+                            <p><strong>De :</strong> FusionInventory → <strong>Vers :</strong> Agent GLPI officiel</p>
+                            <h4>Méthodes utilisées</h4>
+                            <ul>
+                                <li>Scripts PowerShell</li>
+                                <li>Scripts Bash</li>
+                                <li>GPO (Group Policy Objects)</li>
+                                <li>Microsoft Intune</li>
+                            </ul>
+                            <h4>Avantages</h4>
+                            <ul>
+                                <li>Performance et stabilité améliorées</li>
+                                <li>Intégration native avec GLPI</li>
+                                <li>Sécurité modernisée</li>
+                                <li>Support technologique élargi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compétences -->
+        <section id="competences" class="section">
+            <div class="container">
+                <h2>Analyse des Compétences Développées</h2>
+                <div class="section-content">
+                    <div class="competences-grid">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Points forts</h3>
+                                <ul>
+                                    <li>Expertise en supervision d'infrastructures</li>
+                                    <li>Gestion de projets complexes</li>
+                                    <li>Maîtrise des environnements Linux</li>
+                                    <li>Automatisation via scripts</li>
+                                    <li>Conformité réglementaire</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Axes d'amélioration</h3>
+                                <ul>
+                                    <li>Anticipation des contraintes de migration</li>
+                                    <li>Communication avec les utilisateurs finaux</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Apprentissages clés</h3>
+                            <ul>
+                                <li>Importance cruciale de l'automatisation</li>
+                                <li>Vision globale des exigences réglementaires</li>
+                                <li>Évolution vers des approches transversales</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Défis Techniques -->
+        <section id="defis" class="section">
+            <div class="container">
+                <h2>Défis Techniques et Problèmes Rencontrés</h2>
+                <div class="section-content">
+                    <div class="defis-grid">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Intégration API</h3>
+                                <ul>
+                                    <li>Documentation technique incomplète</li>
+                                    <li>Adaptation des scripts pour chaque endpoint</li>
+                                    <li>Gestion des formats de réponse variés</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Configuration</h3>
+                                <ul>
+                                    <li>Conception des dashboards</li>
+                                    <li>Absence d'historique de données</li>
+                                    <li>Configuration des plugins GLPI</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Organisationnel</h3>
+                                <ul>
+                                    <li>Collecte d'inventaire laborieuse</li>
+                                    <li>Contraintes de disponibilité des équipes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Solutions apportées</h3>
+                            <ul>
+                                <li>Documentation proactive</li>
+                                <li>Tests itératifs</li>
+                                <li>Communication renforcée</li>
+                                <li>Coordination améliorée</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bilan et Perspectives -->
+        <section id="bilan" class="section">
+            <div class="container">
+                <h2>Bilan et Perspectives</h2>
+                <div class="section-content">
+                    <div class="bilan-grid">
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Réalisations</h3>
+                                <ul>
+                                    <li>Supervision efficace avec Grafana</li>
+                                    <li>Optimisation de la gestion d'incidents via GLPI</li>
+                                    <li>Automatisation des déploiements</li>
+                                    <li>Renforcement de la posture de cybersécurité</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__body">
+                                <h3>Compétences transversales</h3>
+                                <ul>
+                                    <li>Communication efficace</li>
+                                    <li>Gestion du changement</li>
+                                    <li>Collaboration interprofessionnelle</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Perspectives d'évolution</h3>
+                            <ul>
+                                <li>Spécialisation en cybersécurité</li>
+                                <li>Technologies cloud et conteneurisation</li>
+                                <li>Management technique</li>
+                                <li>Conseil et expertise</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__body">
+                            <h3>Bénéfices pour l'entreprise</h3>
+                            <ul>
+                                <li>Infrastructure mieux supervisée</li>
+                                <li>Sécurité renforcée</li>
+                                <li>Automatisation accrue</li>
+                                <li>Base solide pour la transformation numérique</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Erwann Bonenfant - Rapport d'Alternance BlueKanGo</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        ↑
+    </button>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
